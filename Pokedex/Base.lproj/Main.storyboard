@@ -120,6 +120,7 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="AJb-IL-0P8" id="qlT-ig-FJW"/>
                                             <outlet property="thumbImage" destination="pse-r7-1tp" id="sEE-2a-V8f"/>
+                                            <segue destination="W24-06-wAe" kind="show" identifier="PokemonDetailVC" id="F6x-xx-XNs"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -174,10 +175,30 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="uLm-MR-Tmg" id="7DN-QL-0l4"/>
+                        <outlet property="searchBar" destination="UJa-3K-mJk" id="Hj2-x1-fO3"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="440" y="389"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="yrQ-fI-GfN">
+            <objects>
+                <viewController id="W24-06-wAe" customClass="PokemonDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1QX-Vn-5v6"/>
+                        <viewControllerLayoutGuide type="bottom" id="FLs-2a-eXp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LXA-hf-au6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJ3-KT-yc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="389"/>
         </scene>
     </scenes>
     <resources>
