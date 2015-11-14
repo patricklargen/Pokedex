@@ -143,8 +143,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as! Pokemon? {
+                    detailVC.pokemon = poke
+                }
+            }
+        }
+    }
 }
 

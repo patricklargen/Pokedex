@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -120,7 +119,6 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="AJb-IL-0P8" id="qlT-ig-FJW"/>
                                             <outlet property="thumbImage" destination="pse-r7-1tp" id="sEE-2a-V8f"/>
-                                            <segue destination="W24-06-wAe" kind="show" identifier="PokemonDetailVC" id="F6x-xx-XNs"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -176,15 +174,17 @@
                     <connections>
                         <outlet property="collection" destination="uLm-MR-Tmg" id="7DN-QL-0l4"/>
                         <outlet property="searchBar" destination="UJa-3K-mJk" id="Hj2-x1-fO3"/>
+                        <segue destination="W24-06-wAe" kind="show" identifier="PokemonDetailVC" id="CNT-h1-Gez"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="440" y="389"/>
         </scene>
         <!--Pokemon DetailVC-->
         <scene sceneID="yrQ-fI-GfN">
             <objects>
-                <viewController id="W24-06-wAe" customClass="PokemonDetailVC" sceneMemberID="viewController">
+                <viewController id="W24-06-wAe" customClass="PokemonDetailVC" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1QX-Vn-5v6"/>
                         <viewControllerLayoutGuide type="bottom" id="FLs-2a-eXp"/>
@@ -192,9 +192,29 @@
                     <view key="view" contentMode="scaleToFill" id="LXA-hf-au6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2et-65-Rdc">
+                                <rect key="frame" x="191" y="289" width="218" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="e2X-HK-V4c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2et-65-Rdc" firstAttribute="centerY" secondItem="LXA-hf-au6" secondAttribute="centerY" id="HvG-ie-fyL"/>
+                            <constraint firstItem="2et-65-Rdc" firstAttribute="top" secondItem="1QX-Vn-5v6" secondAttribute="bottom" constant="269" id="IcO-4J-UEw"/>
+                            <constraint firstItem="2et-65-Rdc" firstAttribute="centerX" secondItem="LXA-hf-au6" secondAttribute="centerX" id="yVB-YT-B8M"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="2et-65-Rdc" id="VxY-8b-uSZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJ3-KT-yc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
