@@ -47,5 +47,12 @@
 	<array>
 		<string>Pokemon.ttf</string>
 	</array>
+	<key>LSGetAppDiedEvents</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
