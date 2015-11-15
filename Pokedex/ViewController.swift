@@ -119,7 +119,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             musicPlayer.stop()
             sender.alpha = 0.5
         } else {
-            musicPlayer.play()
+//            musicPlayer.play()
             sender.alpha = 1.0
         }
         
