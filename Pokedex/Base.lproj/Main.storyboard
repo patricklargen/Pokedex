@@ -101,7 +101,7 @@
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.95294117647058818" green="0.82352941176470584" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -218,6 +218,9 @@
                                             <constraint firstAttribute="height" constant="30" id="HPV-L0-0Ea"/>
                                         </constraints>
                                         <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="W24-06-wAe" eventType="touchUpInside" id="ZQ1-cq-RWZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -268,7 +271,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nRZ-eA-q2I">
                                         <rect key="frame" x="0.0" y="30" width="560" height="228"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="110" translatesAutoresizingMaskIntoConstraints="NO" id="0Ja-8U-uOV">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="110" translatesAutoresizingMaskIntoConstraints="NO" id="0Ja-8U-uOV" userLabel="Main IMage">
                                                 <rect key="frame" x="0.0" y="66" width="276" height="96"/>
                                                 <animations/>
                                                 <constraints>
@@ -502,7 +505,19 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="baseAtack" destination="RTP-dz-Bku" id="77v-5z-tjg"/>
+                        <outlet property="currentEvoImage" destination="xBL-NN-hU7" id="uTg-Re-3OW"/>
+                        <outlet property="defenseLabel" destination="U3K-a2-MDS" id="dFN-XW-zFB"/>
+                        <outlet property="descriptionLabel" destination="bme-Ok-E9J" id="XRp-Fm-wOW"/>
+                        <outlet property="evoLabel" destination="eJX-sB-cNu" id="KPG-fC-NYp"/>
+                        <outlet property="heightLabel" destination="bja-H5-wRu" id="MpE-bA-4g0"/>
+                        <outlet property="mainImage" destination="0Ja-8U-uOV" id="iZL-7b-Bny"/>
                         <outlet property="nameLabel" destination="2et-65-Rdc" id="VxY-8b-uSZ"/>
+                        <outlet property="nextEvoImage" destination="ych-Y1-4zS" id="CBD-34-eM0"/>
+                        <outlet property="pokedexLabel" destination="P5F-70-sdw" id="Uri-V6-zGE"/>
+                        <outlet property="pokemonNameLabel" destination="Y4L-yk-EGn" id="OBN-cQ-jbe"/>
+                        <outlet property="typeLabel" destination="swQ-3I-L3k" id="zo0-kC-w0r"/>
+                        <outlet property="weightLabel" destination="jkr-Jb-P1n" id="163-lz-Atb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJ3-KT-yc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
